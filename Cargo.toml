@@ -1,7 +1,10 @@
 [package]
 name = "worldclock-tui"
-version = "0.1.0"
+version = "1.0.0"
 edition = "2024"
+repository = "https://github.com/Feriixu/worldclock-tui-rs"
+description = "A small Rust terminal UI that shows the current time across UTC offsets or the full IANA timezone list."
+license = "Apache-2.0 OR MIT"
 
 [[bin]]
 name = "worldclock"
