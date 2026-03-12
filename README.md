@@ -39,4 +39,3 @@ cargo run --release
 - Built with `ratatui` and `crossterm`
 - Timezone data comes from `chrono-tz`
 - If the terminal window is too small, the app shows a resize warning instead of the table
-# worldclock-tui-rs
