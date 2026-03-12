@@ -1870,7 +1870,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "worldclock"
+name = "worldclock-tui"
 version = "0.1.0"
 dependencies = [
  "chrono",

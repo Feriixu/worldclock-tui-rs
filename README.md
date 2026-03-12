@@ -21,6 +21,13 @@ A small Rust terminal UI that shows the current time across UTC offsets or the f
 cargo run --release
 ```
 
+## Install
+
+```bash
+cargo install worldclock-tui
+worldclock
+```
+
 ## Controls
 
 - `q` or `Esc`: quit
