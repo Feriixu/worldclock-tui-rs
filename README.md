@@ -6,7 +6,7 @@ A small Rust terminal UI that shows the current time across UTC offsets or the f
 
 ![Screenshot](img/screenshot.png)
 
-<video src="img/demo.webm" controls></video>
+![Demo](img/demo.gif)
 
 ## Features
 
