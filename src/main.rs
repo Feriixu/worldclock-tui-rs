@@ -6,7 +6,9 @@ use chrono_tz::{TZ_VARIANTS, Tz};
 use crossterm::cursor::{Hide, Show};
 use crossterm::event::{self, Event, KeyCode, KeyEvent, KeyEventKind, KeyModifiers};
 use crossterm::execute;
-use crossterm::terminal::{EnterAlternateScreen, LeaveAlternateScreen, disable_raw_mode, enable_raw_mode};
+use crossterm::terminal::{
+    EnterAlternateScreen, LeaveAlternateScreen, disable_raw_mode, enable_raw_mode,
+};
 use ratatui::backend::CrosstermBackend;
 use ratatui::layout::{Constraint, Direction, Layout};
 use ratatui::style::{Color, Modifier, Style};
@@ -192,7 +194,9 @@ impl App {
                 end.max(1),
                 total
             )),
-            Line::from("Arrows or j/k scroll, Ctrl-u/Ctrl-d jump, gg/G move, a toggles all zones, q exits."),
+            Line::from(
+                "Arrows or j/k scroll, Ctrl-u/Ctrl-d jump, gg/G move, a toggles all zones, q exits.",
+            ),
         ]);
         frame.render_widget(header, chunks[0]);
 
@@ -372,12 +376,7 @@ fn offset_row(
     }
 }
 
-fn zone_row(
-    now: DateTime<Utc>,
-    zone: Tz,
-    local_date: NaiveDate,
-    local_offset: &str,
-) -> DisplayRow {
+fn zone_row(now: DateTime<Utc>, zone: Tz, local_date: NaiveDate, local_offset: &str) -> DisplayRow {
     let local = now.with_timezone(&zone);
     let offset_text = local.format("%:z").to_string();
 
